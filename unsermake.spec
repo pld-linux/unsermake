@@ -11,6 +11,7 @@ Group:		Development/Building
 Source0:	http://ep09.pld-linux.org/~djurban/kde/%{name}-%{_snap}.tar.bz2
 # Source0-md5:	69e64edc0ec716f718606ba95ef16372
 URL:		http://www.kde.org/
+BuildRequires:	python
 Requires:	python
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
