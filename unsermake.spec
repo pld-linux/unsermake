@@ -1,5 +1,5 @@
 
-%define		_snap		040503
+%define		_snap		040511
 %define		_packager	adgor
 
 Summary:	An automake replacement by The KDE Team
@@ -10,7 +10,7 @@ Release:	1
 License:	LGPL
 Group:		Development/Building
 Source0:	http://ep09.pld-linux.org/~%{_packager}/kde/%{name}-%{_snap}.tar.bz2
-# Source0-md5:	84808c3798406118f73bf90161639df2
+# Source0-md5:	f2ca222dcce8fbed9beea5a4347c355d
 URL:		http://www.kde.org/
 BuildRequires:	python-modules
 Requires:	python-modules
