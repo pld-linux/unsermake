@@ -5,7 +5,7 @@ Summary:	An automake replacement by The KDE Team
 Summary(pl):	Zamiennik dla automake autorstwa cz³onków zespo³u KDE
 Name:		unsermake
 Version:	%{_snap}
-Release:	1
+Release:	2
 License:	LGPL
 Group:		Development/Building
 Source0:	%{name}-%{_snap}.tar.bz2
