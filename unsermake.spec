@@ -1,35 +1,41 @@
 
-%define		_snap		040211
+%define		_snap		040401
 
-Summary:	TODO
-Summary(pl):	TODO
+Summary:	An automake replacement by The KDE Team
+Summary(pl):	Zamiennik dla automake autorstwa cz³onków zespo³u KDE
 Name:		unsermake
 Version:	%{_snap}
 Release:	1
 License:	LGPL
 Group:		Development/Building
-Source0:	http://ep09.pld-linux.org/~adgor/kde/%{name}-%{_snap}.tar.bz2
-# Source0-md5:	6723aadf64516a33fc16d32f7768d433
+Source0:	http://ep09.pld-linux.org/~djurban/kde/%{name}-%{_snap}.tar.bz2
+# Source0-md5:	69e64edc0ec716f718606ba95ef16372
 URL:		http://www.kde.org/
 Requires:	python
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-TODO.
+An automake replacement by The KDE Team.
 
 %description -l pl
-TODO.
+Zamiennik dla automake autorstwa cz³onków zespo³u KDE.
 
 %prep
 %setup -q -n %{name}-%{_snap}
 
+##for i in *.py; 
+##do
+##%{__python} $i build
+##done
+%{__python} -c "import compileall; compileall.compile_dir('./')"
 %build
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
 install -d $RPM_BUILD_ROOT%{_datadir}/%{name}
-install am_edit %{name} *.{py{,c},um} $RPM_BUILD_ROOT%{_datadir}/%{name}
+install am_edit %{name} *.{py,pyc,um} $RPM_BUILD_ROOT%{_datadir}/%{name}
+#%%{py_comp} - not working, thou it is the right way probably
 
 %clean
 rm -rf $RPM_BUILD_ROOT
