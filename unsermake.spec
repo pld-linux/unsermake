@@ -10,7 +10,7 @@ Release:	1
 License:	LGPL
 Group:		Development/Building
 Source0:	http://ep09.pld-linux.org/~%{_packager}/kde/%{name}-%{_snap}.tar.bz2
-# Source0-md5:	f2ca222dcce8fbed9beea5a4347c355d
+# Source0-md5:	29f16d83dd4234f3f01d42228cdf9537
 URL:		http://www.kde.org/
 BuildRequires:	python-modules
 Requires:	python-modules
