@@ -1,5 +1,5 @@
 
-%define		_snap		041002
+%define		_snap		041117
 
 Summary:	An automake replacement by The KDE Team
 Summary(pl):	Zamiennik dla automake autorstwa cz³onków zespo³u KDE
@@ -9,7 +9,7 @@ Release:	1
 License:	LGPL
 Group:		Development/Building
 Source0:	ftp://ftp.pld-linux.org/software/kde/%{name}-%{_snap}.tar.bz2
-# Source0-md5:	31c8e3d84f59239b85aa5912b5c37650
+# Source0-md5:	951d21db266792c3229085020f1870b9
 URL:		http://www.kde.org/
 BuildRequires:	python-modules
 Requires:	python-modules
