@@ -24,12 +24,15 @@ Zamiennik dla automake autorstwa cz³onków zespo³u KDE.
 %prep
 %setup -q -n %{name}-%{_snap}
 
+%build
+
 ##for i in *.py; 
 ##do
 ##%{__python} $i build
 ##done
+
 %{__python} -c "import compileall; compileall.compile_dir('./')"
-%build
+
 
 %install
 rm -rf $RPM_BUILD_ROOT
