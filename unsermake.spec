@@ -1,5 +1,5 @@
 
-%define		_snap		040401
+%define		_snap		040503
 
 Summary:	An automake replacement by The KDE Team
 Summary(pl):	Zamiennik dla automake autorstwa cz³onków zespo³u KDE
@@ -9,7 +9,7 @@ Release:	1
 License:	LGPL
 Group:		Development/Building
 Source0:	http://ep09.pld-linux.org/~djurban/kde/%{name}-%{_snap}.tar.bz2
-# Source0-md5:	69e64edc0ec716f718606ba95ef16372
+# Source0-md5:	84808c3798406118f73bf90161639df2
 URL:		http://www.kde.org/
 BuildRequires:	python-modules
 Requires:	python-modules
@@ -35,7 +35,7 @@ Zamiennik dla automake autorstwa cz³onków zespo³u KDE.
 rm -rf $RPM_BUILD_ROOT
 
 install -d $RPM_BUILD_ROOT%{_datadir}/%{name}
-install am_edit %{name} *.{py,pyc,um} $RPM_BUILD_ROOT%{_datadir}/%{name}
+install automake.sudo %{name} *.{py,pyc,um} $RPM_BUILD_ROOT%{_datadir}/%{name}
 #%%{py_comp} - not working, thou it is the right way probably
 
 %clean
@@ -46,7 +46,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc README TODO doc/*.{pdf,obj,sxi,txt}
 %dir %{_datadir}/%{name}
 %attr(755,root,root) %{_datadir}/%{name}/%{name}
-%{_datadir}/%{name}/am_edit
+%{_datadir}/%{name}/automake.sudo
 %{_datadir}/%{name}/*.py
 %{_datadir}/%{name}/*.pyc
 %{_datadir}/%{name}/*.um
