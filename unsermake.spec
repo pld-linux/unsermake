@@ -9,7 +9,7 @@ Release:	1
 License:	LGPL
 Group:		Development/Building
 Source0:	ftp://ftp.pld-linux.org/software/kde/%{name}-%{_snap}.tar.bz2
-# Source0-md5:	29f16d83dd4234f3f01d42228cdf9537
+# Source0-md5:	d41d8cd98f00b204e9800998ecf8427e
 URL:		http://www.kde.org/
 BuildRequires:	python-modules
 Requires:	python-modules
