@@ -1,5 +1,5 @@
 
-%define		_snap		040203
+%define		_snap		040211
 
 Summary:	TODO
 Summary(pl):	TODO
@@ -9,7 +9,7 @@ Release:	1
 License:	LGPL
 Group:		Development/Building
 Source0:	http://ep09.pld-linux.org/~adgor/kde/%{name}-%{_snap}.tar.bz2
-# Source0-md5:	709a4ff69a8ce72a0ff02eefbff39e4c
+# Source0-md5:	6723aadf64516a33fc16d32f7768d433
 URL:		http://www.kde.org/
 Requires:	python
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
