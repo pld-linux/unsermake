@@ -1,5 +1,5 @@
 
-%define		_snap		040511
+%define		_snap		040805
 
 Summary:	An automake replacement by The KDE Team
 Summary(pl):	Zamiennik dla automake autorstwa cz³onków zespo³u KDE
@@ -35,7 +35,7 @@ Zamiennik dla automake autorstwa cz³onków zespo³u KDE.
 rm -rf $RPM_BUILD_ROOT
 
 install -d $RPM_BUILD_ROOT%{_datadir}/%{name}
-install automake.sudo %{name} *.{py,pyc,um} $RPM_BUILD_ROOT%{_datadir}/%{name}
+install %{name} *.{py,pyc,um} $RPM_BUILD_ROOT%{_datadir}/%{name}
 #%%{py_comp} - not working, thou it is the right way probably
 
 %clean
@@ -46,7 +46,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc README TODO doc/*.{pdf,obj,sxi,txt}
 %dir %{_datadir}/%{name}
 %attr(755,root,root) %{_datadir}/%{name}/%{name}
-%{_datadir}/%{name}/automake.sudo
+#{_datadir}/%{name}/automake.sudo
 %{_datadir}/%{name}/*.py
 %{_datadir}/%{name}/*.pyc
 %{_datadir}/%{name}/*.um
