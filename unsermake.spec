@@ -11,7 +11,9 @@ Group:		Development/Building
 Source0:	%{name}-%{_snap}.tar.bz2
 # Source0-md5:	1954c24b1e3a61b05220c8f5819420d0
 URL:		http://www.kde.me.uk/index.php?page=unsermake
+BuildRequires:	python
 BuildRequires:	python-modules
+Requires:	python
 Requires:	python-modules
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
