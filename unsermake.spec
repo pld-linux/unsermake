@@ -11,8 +11,7 @@ Group:		Development/Building
 Source0:	ftp://ftp.pld-linux.org/software/kde/%{name}-%{_snap}.tar.bz2
 ##% Source0-md5:	1954c24b1e3a61b05220c8f5819420d0
 URL:		http://www.kde.me.uk/index.php?page=unsermake
-BuildRequires:	python
-BuildRequires:	python-modules
+BuildRequires:	rpm-pythonprov
 Requires:	python
 Requires:	python-modules
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
