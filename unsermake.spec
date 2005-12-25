@@ -1,5 +1,4 @@
-
-%define		_snap		050704
+%define		_snap		051225
 
 Summary:	An automake replacement by The KDE Team
 Summary(pl):	Zamiennik dla automake autorstwa cz³onków zespo³u KDE
@@ -9,7 +8,8 @@ Release:	1
 License:	LGPL
 Group:		Development/Building
 Source0:	ftp://ftp.pld-linux.org/software/kde/%{name}-%{_snap}.tar.bz2
-##% Source0-md5:	1954c24b1e3a61b05220c8f5819420d0
+#Source0-md5:	e40206c9244c80ac9a68a216863ae95c
+Source1:	%{name}-wrapper.sh
 URL:		http://www.kde.me.uk/index.php?page=unsermake
 BuildRequires:	rpm-pythonprov
 Requires:	python
@@ -22,8 +22,20 @@ An automake replacement by The KDE Team.
 %description -l pl
 Zamiennik dla automake autorstwa cz³onków zespo³u KDE.
 
+%package wrapper
+Summary:	Unsermake enabling wrapper
+Summary(pl):	Wrapper uruchamiajacy unsermake
+Group:		Development/Tools
+Requires:	%{name} = %{version}-%{release}
+
+%description wrapper
+Unsermake enabling wrapper.
+
+%description wrapper -l pl
+Wrapper uruchamiajacy unsermake.
+
 %prep
-%setup -q -n %{name}-%{_snap}
+%setup -q -n %{name}
 
 %build
 
@@ -39,7 +51,9 @@ Zamiennik dla automake autorstwa cz³onków zespo³u KDE.
 rm -rf $RPM_BUILD_ROOT
 
 install -d $RPM_BUILD_ROOT%{_datadir}/%{name}
+install -d $RPM_BUILD_ROOT/etc/profile.d
 install %{name} *.{py,pyc,um} $RPM_BUILD_ROOT%{_datadir}/%{name}
+install %{SOURCE1} $RPM_BUILD_ROOT/etc/profile.d/unsermake.sh
 #%%{py_comp} - not working, thou it is the right way probably
 
 %clean
@@ -54,3 +68,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/%{name}/*.py
 %{_datadir}/%{name}/*.pyc
 %{_datadir}/%{name}/*.um
+
+%files wrapper
+%defattr(644,root,root,755)
+/etc/profile.d/unsermake.sh
