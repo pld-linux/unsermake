@@ -24,7 +24,7 @@ Zamiennik dla automake autorstwa cz³onków zespo³u KDE.
 
 %package wrapper
 Summary:	Unsermake enabling wrapper
-Summary(pl):	Wrapper uruchamiajacy unsermake
+Summary(pl):	Wrapper uruchamiaj±cy unsermake
 Group:		Development/Tools
 Requires:	%{name} = %{version}-%{release}
 
@@ -32,7 +32,7 @@ Requires:	%{name} = %{version}-%{release}
 Unsermake enabling wrapper.
 
 %description wrapper -l pl
-Wrapper uruchamiajacy unsermake.
+Wrapper uruchamiaj±cy unsermake.
 
 %prep
 %setup -q -n %{name}
