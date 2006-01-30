@@ -10,7 +10,7 @@ Group:		Development/Building
 Source0:	ftp://ftp.pld-linux.org/software/kde/%{name}-%{_snap}.tar.bz2
 #Source0-md5:	e40206c9244c80ac9a68a216863ae95c
 Source1:	%{name}-wrapper.sh
-URL:		http://www.kde.me.uk/index.php?page=unsermake
+URL:		http://wiki.kde.org/unsermake
 BuildRequires:	rpm-pythonprov
 Requires:	python
 Requires:	python-modules
