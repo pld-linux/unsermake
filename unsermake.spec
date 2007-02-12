@@ -1,7 +1,7 @@
 %define		_snap		051225
 
 Summary:	An automake replacement by The KDE Team
-Summary(pl.UTF-8):   Zamiennik dla automake autorstwa członków zespołu KDE
+Summary(pl.UTF-8):	Zamiennik dla automake autorstwa członków zespołu KDE
 Name:		unsermake
 Version:	%{_snap}
 Release:	1
@@ -24,7 +24,7 @@ Zamiennik dla automake autorstwa członków zespołu KDE.
 
 %package wrapper
 Summary:	Unsermake enabling wrapper
-Summary(pl.UTF-8):   Wrapper uruchamiający unsermake
+Summary(pl.UTF-8):	Wrapper uruchamiający unsermake
 Group:		Development/Tools
 Requires:	%{name} = %{version}-%{release}
 
